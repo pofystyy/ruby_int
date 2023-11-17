@@ -7,7 +7,7 @@ def split_into_column(array, columns)
   steps = (array.count / columns.to_f).ceil
   
   arr = []
-  steps.times do |i|
+  steps.times do
     arr << array.first(columns) 
     array = array[columns..-1]
   end
