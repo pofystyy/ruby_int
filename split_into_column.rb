@@ -15,13 +15,13 @@ def split_into_column(array, columns)
   # arr = array.each_slice(columns).to_a
 
   count_of_nil = columns - arr.last.count
-  arr.last.concat( [nil] * count_of_nil)
+  arr.last.concat([nil] * count_of_nil)
   
   arr
 end
 
 def right_data?(array, columns)
-  Array === array && Integer === columns && columns > 0
+  Array === array && columns.to_i.positive?
 end
 
 # a list of data for checking split_into_column()
